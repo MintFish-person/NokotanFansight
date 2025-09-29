@@ -1,15 +1,53 @@
 body {
 	background: rgb(30, 30, 30);
+
+	margin: 0px;
+	padding: 0px;
+
+	font-family: sans-serif;
 }
 
 #bruker-link {
-	text-align: left;
+	align-self: right;	
 }
 
 .navbar {
-	background-color: black;
+	background-color: white;
 
-	padding: 5px;
+	box-shadow: 0px 5px 10px black;
 
-	border-radius: 5px;
+	padding: 10px;
+}
+
+.info-div {
+	color: black;
+	background-color: white;
+
+	padding: 20px;
+
+	margin: auto;
+
+	margin-top: 30px;
+
+	width: 50%;
+
+	box-shadow: 0px 0px 10px black;
+}
+
+.headers {
+	text-align: center;
+}
+
+.navlinks {
+	color: black;
+
+	transition: 0.25s;
+}
+
+.navlinks:hover {
+	color: cyan;
+}
+
+.logo {
+	width: 1px;
 }
