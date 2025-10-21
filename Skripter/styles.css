@@ -1,9 +1,18 @@
+/* Dette er CSS variabler
+Jeg bruker variabler sånn at jeg ikke må drive å bytte på verider overalt */
+:root {
+	--navbar-color: rgb(36, 36, 36);
+	--info-div-color: rgba(30, 30, 30, 0.75);
+	--shadow-color: rgba(20, 20, 20, 0.75);
+}
+
 body {
 	background-image: url("/medie/bilder/nokotan_background.png");
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-attachment: fixed;
+	background-attachment: fixed; /* Denne CSS komandoen gjør at bakgrunnen sitter stille */
 
+	/* Disse er bare her sånn at navbaren rekker ut til kantene av siden */
 	margin: 0px;
 	padding: 0px;
 
@@ -24,23 +33,27 @@ body {
 }
 
 .navbar {
-	color: white;
-	background-color: rgb(36, 36, 36);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--navbar-color);
 
-	box-shadow: 0px 3px 5px rgba(42, 42, 42, 0.5);
+	box-shadow: 0px 3px 10px 1px var(--shadow-color);
 
-	padding: 10px;
+	top: 0;
+	position: sticky;
 
-	line-height: 50%;
+	z-index: 10;
 }
 
 .info-div {
 	color: white;
-	background-color: rgb(36, 36, 36);
+	background-color: var(--info-div-color);
 
 	padding: 20px;
 
 	margin: auto;
+	margin-bottom: 20px;
 
 	margin-top: 30px;
 
@@ -48,7 +61,11 @@ body {
 
 	border-radius: 10px;
 
-	box-shadow: 0px 0px 5px rgba(42, 42, 42, 0.5);
+	box-shadow: 0px 0px 5px var(--shadow-color);
+
+	backdrop-filter: blur(7.5px);
+
+	z-index: 0;
 }
 
 .headers {
@@ -58,23 +75,22 @@ body {
 }
 
 .navlinks {
-	color: white;
-
-	transition: 0.25s;
-
-	margin: auto;
-
-	font-size: 15px;
-
-	vertical-align: center;
-
-	text-decoration: none;
-
-	line-height: 100%;
+	list-style: none;
+	display: flex;
+	gap: 10px;
 }
 
-.navlinks:hover {
-	color: cyan;
+.navlinks a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	transition: color 0.1s;
+
+	transition: 0.2s;
+}
+
+.navlinks a:hover {
+	color: rgb(0, 217, 255);
 
 	font-size: 20px;
 }
@@ -87,10 +103,6 @@ body {
 	width: 50px;
 
 	transition: 0.5s;
-}
-
-.social-links:hover {
-	box-shadow: 0px 0px 5px black;
 }
 
 .picture-context {
@@ -106,5 +118,5 @@ body {
 
 	width: 100%;
 
-	box-shadow: 0px 5px 5px rgb(20, 20, 20);
+	box-shadow: 0px 5px 5px 1px var(--shadow-color);
 }
