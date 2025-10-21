@@ -6,6 +6,10 @@ Jeg bruker variabler sånn at jeg ikke må drive å bytte på verider overalt */
 	--shadow-color: rgba(20, 20, 20, 0.75);
 }
 
+a {
+	color: orange;
+}
+
 body {
 	background-image: url("medie/bilder/nokotan_background.png");
 	background-repeat: no-repeat;
@@ -90,7 +94,7 @@ body {
 }
 
 .navlinks a:hover {
-	color: rgb(0, 217, 255);
+	color: orange;
 
 	font-size: 20px;
 }
