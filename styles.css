@@ -15,6 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-attachment: fixed; /* Denne CSS komandoen gjør at bakgrunnen sitter stille */
+	background-size: cover;
 
 	/* Disse er bare her sånn at navbaren rekker ut til kantene av siden */
 	margin: 0px;
